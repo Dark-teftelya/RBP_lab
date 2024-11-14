@@ -1,0 +1,26 @@
+.employee-list {
+    margin: 20px 0;
+}
+
+.employee-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #8b8888; /* Цвет фона для каждого элемента */
+    border-radius: 5px; /* Закругленные углы */
+    transition: background-color 0.3s; /* Плавный переход фона */
+}
+
+.employee-item:hover {
+    background-color: #959292; /* Цвет фона при наведении */
+}
+
+.employee-checkbox {
+    margin-right: 10px; /* Отступ справа для чекбокса */
+}
+
+.employee-name {
+    font-size: 16px; /* Размер шрифта */
+    font-weight: 500; /* Полужирный текст */
+}

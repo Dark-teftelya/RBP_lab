@@ -1,0 +1,55 @@
+/* Общие стили для контейнера фильтра */
+.filter-comp {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #292929;
+    border-radius: 8px;
+    background-color: #767676;
+}
+
+/* Заголовки формы фильтрации */
+.filter-comp h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #121111;
+}
+
+/* Заголовки для типов работ и отделов */
+.filter-comp h4 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #555;
+}
+
+/* Группа для размещения чекбоксов в строку */
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Отступ между элементами */
+}
+
+/* Стили для чекбоксов и меток */
+.filter-comp input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.filter-comp label {
+    margin-right: 15px;
+}
+
+/* Кнопка применения фильтров */
+.filter-comp button {
+    background-color: #4CAF50; /* Зеленый цвет */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+/* Эффект при наведении на кнопку */
+.filter-comp button:hover {
+    background-color: #45a049; /* Более темный зеленый при наведении */
+}

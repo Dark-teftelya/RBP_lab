@@ -1,0 +1,258 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #4CAF50; /* Цвет фона хедера */
+    color: white; /* Цвет текста */
+    padding: 20px; /* Внутренние отступы */
+    text-align: center; /* Выравнивание текста по центру */
+    position: relative; /* Позиционирование для кубика */
+    overflow: hidden; /* Скрыть части кубика, выходящие за пределы */
+    
+}
+
+.header h1 {
+    margin: 0; /* Убираем отступы у заголовка */
+}
+
+.header nav {
+    margin-top: 10px; /* Отступ сверху для навигации */
+}
+
+.header nav ul {
+    list-style-type: none; /* Убираем маркеры у списка */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+.header nav ul li {
+    display: inline; /* Отображаем элементы списка в строку */
+    margin: 0 15px; /* Горизонтальные отступы между пунктами */
+}
+
+.header nav ul li a {
+    color: white; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+
+.header nav ul li a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Стиль для 3D кубика */
+.cube {
+    width: 50px;
+    height: 50px;
+    position: absolute; /* Абсолютное позиционирование */
+    left: 20px; /* Позиция по горизонтали */
+    top: 80px; /* Позиция по вертикали */
+    transform-style: preserve-3d;
+    animation: rotate 3s infinite linear; /* Анимация вращения */
+}
+
+/* Общие стили для всех сторон куба */
+.cube .side {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(2, 255, 11, 0.8);
+    border: 1px solid #4CAF50; /* Граница кубика */
+}
+
+/* Позиционирование сторон куба */
+.cube .front {
+    transform: translateZ(25px);
+}
+
+.cube .back {
+    transform: rotateY(180deg) translateZ(25px);
+}
+
+.cube .left {
+    transform: rotateY(-90deg) translateZ(25px);
+}
+
+.cube .right {
+    transform: rotateY(90deg) translateZ(25px);
+}
+
+.cube .top {
+    transform: rotateX(90deg) translateZ(25px);
+}
+
+.cube .bottom {
+    transform: rotateX(-90deg) translateZ(25px);
+}
+
+/* Анимация вращения */
+@keyframes rotate {
+    0% {
+        transform: rotateX(0) rotateY(0);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+main {
+    padding: 20px; /* Внутренние отступы для основного содержимого */
+    margin-bottom: 60px; /* Отступ для футера */
+}
+
+.employee-form, .job-type-form, .department-form, .modal{
+    margin-bottom: 20px; /* Отступ снизу для форм */
+    padding: 15px; /* Внутренние отступы для форм */
+    border: 1px solid #ddd; /* Рамка вокруг форм */
+    border-radius: 5px; /* Закругленные углы */
+    background-color: #4d4d4d; /* Цвет фона форм */
+}
+
+.styled-table {
+    width: 100%; /* Ширина таблицы */
+    border-collapse: collapse; /* Убираем двойные границы */
+    margin-bottom: 20px; /* Отступ снизу для таблицы */
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px; /* Внутренние отступы для ячеек */
+    text-align: left; /* Выравнивание текста в ячейках */
+    border-bottom: 1px solid #ddd; /* Нижняя граница ячеек */
+}
+
+.styled-table th {
+    background-color: #4CAF50; /* Цвет фона для заголовков таблицы */
+    color: white; /* Цвет текста для заголовков */
+}
+
+.delete-button {
+    background-color: #4d4d4d; /* Цвет фона для кнопки удаления */
+    color: white; /* Цвет текста для кнопки удаления */
+    border: none; /* Убираем границы */
+    padding: 8px 12px; /* Внутренние отступы для кнопки */
+    border-radius: 4px; /* Закругленные углы */
+    cursor: pointer; /* Указатель курсора при наведении */
+}
+
+.delete-button:hover {
+    background-color: #858585; /* Цвет фона при наведении */
+}
+
+.edit-button{
+    background-color: #4d4d4d; /* Цвет фона для кнопки удаления */
+    color: white; /* Цвет текста для кнопки удаления */
+    border: none; /* Убираем границы */
+    padding: 8px 12px; /* Внутренние отступы для кнопки */
+    border-radius: 4px; /* Закругленные углы */
+    cursor: pointer; /* Указатель курсора при наведении */
+}
+
+.edit-button:hover{
+    background-color: #858585; /* Цвет фона при наведении */
+}
+
+.footer {
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 10px; /* Внутренние отступы */
+    background-color: #4CAF50; /* Цвет фона футера */
+    color: white; /* Цвет текста футера */
+    position: relative; /* Позиционирование футера */
+    bottom: 0; /* Прикрепляем футер к низу страницы */
+    width: 100%; /* Ширина футера */
+    margin-top: 20px; /* Отступ сверху для футера */
+}
+
+
+.export-buttons {
+    display: flex; /* Устанавливаем флекс-контейнер для кнопок */
+    flex-direction: row; /* Изменяем направление на строчку */
+    justify-content: center; /* Центрируем кнопки по горизонтали */
+    align-items: center; /* Центрируем кнопки по вертикали */
+    margin: 10px 0; /* Отступы сверху и снизу */
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #4d4d4d;
+    flex-wrap: wrap;
+}
+
+.export-button {
+    background-color: #4CAF50; /* Цвет фона кнопки */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем границы */
+    padding: 10px 20px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer; /* Указатель курсора при наведении */
+    margin: 0 10px; /* Горизонтальные отступы между кнопками */
+    transition: background-color 0.3s; /* Плавный переход для цвета фона */
+    font-size: 16px; /* Размер шрифта */
+    height: auto; /* Устанавливаем высоту кнопки на auto */
+}
+
+.export-button:hover {
+    background-color: #45a049; /* Цвет фона при наведении */
+}
+
+
+
+
+.input-field-container {
+    display: flex;
+    position: relative;
+    align-items: stretch; /* Растягиваем элементы по высоте */
+    margin-bottom: 30px; /* Отступ снизу для контейнера */
+    width: 400px; /* Фиксированная ширина контейнера */
+    margin: 0 auto; /* Центрируем контейнер */
+    
+}
+
+.input-field, .select-field {
+    width: 100%; /* Ширина поля */
+    height: 40px; /* Одинаковая высота для всех полей */
+    padding: 10px; /* Внутренние отступы */
+    border: 1px solid #ddd; /* Граница поля */
+    border-radius: 15px; /* Закругленные углы */
+    background-color: #f9f9f9; /* Цвет фона */
+    transition: border-color 0.3s; /* Плавный переход для границы */
+    text-align: center; /* Центрируем текст внутри поля */
+    font-size: 16px; /* Размер шрифта */
+    appearance: none; /* Убираем стандартный стиль select */
+    margin: 14px;
+}
+
+.select-field {
+    padding: 0; /* Убираем внутренние отступы для select */
+    background-image: url('../arrow-icon.svg'); /* Добавьте стрелку для селекта */
+    background-repeat: no-repeat; /* Не повторять изображение */
+    background-position: right 5px center; /* Позиция стрелки */
+    background-size: 22px; /* Размер стрелки */
+}
+
+.input-field:focus, .select-field:focus {
+    border-color: #4CAF50; /* Цвет границы при фокусе */
+}
+
+.label {
+    position: absolute;
+    left: 20px; /* Отступ от левого края поля */
+    top: 13px; /* Отступ сверху для подписей */
+    font-size: 14px; /* Размер шрифта для подписи */
+    color: #666; /* Цвет текста для подписи */
+    transition: 0.3s; /* Плавный переход */
+    
+    padding: 0 5px; /* Отступы для фона */
+}
+
+
+.input-field:focus + .label, 
+.input-field:not(:placeholder-shown) + .label,
+.select-field:focus + .label,
+.select-field:not(:placeholder-shown) + .label {
+    top: -10px; /* Поднимаем подпись */
+    font-size: 12px; /* Уменьшаем размер шрифта для подписи */
+    color: #41f047; /* Цвет подписи при активном поле */
+}
+
+
+
+
