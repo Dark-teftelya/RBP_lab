@@ -3,7 +3,7 @@ import axios from 'axios';
 import './EmployeeList.css';
 import './ScrollToTopButton.css';
 import './export.css';
-import DatePicker from 'react-datepicker'; // Импортируем DatePicker
+// import DatePicker from 'react-datepicker'; // Импортируем DatePicker
 import 'react-datepicker/dist/react-datepicker.css'; // Импортируем стили для DatePicker
 
 import FilterComp from './FilterComp';
@@ -488,9 +488,9 @@ const EmployeeList = () => {
                 <h1>Employee Management System</h1>
                 <nav>
                     <ul>
-                        <li><a href="#add-employee">Add Employee</a></li>
-                        <li><a href="#add-job-type">Add Job Type</a></li>
-                        <li><a href="#add-department">Add Department</a></li>
+                        <li><a href="#add-employee">Сотрудники</a></li>
+                        <li><a href="#add-job-type">Тип Работы</a></li>
+                        <li><a href="#add-department">Отделы</a></li>
                     </ul>
                 </nav>
             </header>

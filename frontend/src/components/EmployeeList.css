@@ -46,8 +46,8 @@ body {
     width: 50px;
     height: 50px;
     position: absolute; /* Абсолютное позиционирование */
-    left: 20px; /* Позиция по горизонтали */
-    top: 80px; /* Позиция по вертикали */
+    left: 60px; /* Позиция по горизонтали */
+    top: 110px; /* Позиция по вертикали */
     transform-style: preserve-3d;
     animation: rotate 3s infinite linear; /* Анимация вращения */
 }
